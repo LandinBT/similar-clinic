@@ -1,0 +1,40 @@
+#ifndef TIME_HPP_INCLUDED
+#define TIME_HPP_INCLUDED
+
+#include <string>
+#include <iostream>
+
+class Time {
+    int hour;
+    int minute;
+
+    int toInt() const;
+
+    bool isValid(const Time&) const;
+
+public:
+    Time();
+    Time(const Time&);
+
+    Time& operator = (const Time&);
+
+    void setHour(const int&);
+    void setMinute(const int&);
+
+    std::string toString() const;
+
+    int getHour() const;
+    int getMinute() const;
+
+    bool operator == (const Time&) const;
+    bool operator != (const Time&) const;
+    bool operator < (const Time&) const;
+    bool operator <= (const Time&) const;
+    bool operator > (const Time&) const;
+    bool operator >= (const Time&) const;
+
+    friend std::istream& operator >> (std::istream&, Time&);
+    friend std::ostream& operator << (std::ostream&, const Time&);
+};
+
+#endif // TIME_HPP_INCLUDED
