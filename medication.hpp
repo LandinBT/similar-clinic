@@ -3,6 +3,8 @@
 
 #include <string>
 #include <iostream>
+#include <sstream> // stringstream
+#include <iomanip> // setfill, setw
 
 class Medication {
     long code;
