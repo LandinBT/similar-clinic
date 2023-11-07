@@ -3,6 +3,9 @@
 
 #include <string>
 #include <iostream>
+#include <sstream> // stringstream
+#include <iomanip> // setw, setfill
+#include <stdexcept> // invalid_argument
 
 class Date {
     int day;
@@ -11,7 +14,7 @@ class Date {
 
     int toInt() const;
 
-    bool isValid() const;
+    bool isValid(const int&, const int&, const int&) const; // day, month, year
 
 public:
     Date();

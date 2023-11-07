@@ -3,6 +3,9 @@
 
 #include <string>
 #include <iostream>
+#include <sstream> // stringstream
+#include <iomanip> // setw, setfill
+#include <stdexcept> // invalid_argument
 
 class Time {
     int hour;
@@ -10,7 +13,7 @@ class Time {
 
     int toInt() const;
 
-    bool isValid(const Time&) const;
+    bool isValid(const int&, const int&) const; // hour, minute
 
 public:
     Time();
